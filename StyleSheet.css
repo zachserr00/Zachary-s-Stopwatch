@@ -1,0 +1,69 @@
+﻿@font-face {
+    font-family: khFont;
+    src: url(KH_Font.ttf);
+}
+/* Mixin's */
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin corners ($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -khtml-border-radius: $radius;
+}
+
+body {
+    background: url(KH_ML_1.jpg);
+    font-family: khFont;
+    height: 100%;
+}
+div {
+    border: solid black 2px;
+    background: url(KH_ML_SOA.png) 1%;
+
+}
+.wrapper {
+    width: 800px;
+    margin: 30px auto;
+    color: black;
+    text-align: center;
+}
+
+h1 {
+    font-family: khFont;
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+
+p, #seconds, #tens {
+    font-size: 2.4em;
+    color: black;
+    text-shadow: 10px black;
+}
+
+button {
+    @include corners (5px);
+    background: url(KH_3.jpg);
+    color: white;
+    border: solid 1px black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+    &:hover
+
+{
+    @include transition;
+    background: url(KH_1FM.jpg);
+    border: solid 1px black;
+    color: white;
+}
+}
